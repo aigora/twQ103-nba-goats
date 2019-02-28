@@ -4,9 +4,9 @@ Es un programa para aficionados a la NBA, cuenta con una base de datos de todos 
 
 ## Integrantes del equipo
 
-Aadnan Talib Rizqui, @adnantalib3.
-Jorge Gil Pereira, @jorgegilp.
-Diego Medina Espinosa, @diego105.
+* Aadnan Talib Rizqui, @adnantalib3.
+* Jorge Gil Pereira, @jorgegilp.
+* Diego Medina Espinosa, @diego105.
 
 ## Objetivos del trabajo
 
