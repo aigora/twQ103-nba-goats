@@ -6,7 +6,7 @@ Es un programa para aficionados a la NBA, cuenta con una base de datos de todos 
 
 * Aadnan Talib Rizqui, @adnantalib3.
 * Jorge Gil Pereira, @jorgegilp.
-* Diego Medina Espinosa, @diego105.
+* Diego Medina Espinosa, @Diego105.
 
 ## Objetivos del trabajo
 
