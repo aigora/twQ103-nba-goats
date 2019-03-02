@@ -10,4 +10,4 @@ Es un programa para aficionados a la NBA, cuenta con una base de datos de todos 
 
 ## Objetivos del trabajo
 
-Los principales objetivos de este trabajo son dos, conseguir una base de datos con información de los jugadores que el usuario pueda ver; y por otro lado, dar la posibilidad al usuario de dar su opinion acerca de la nba permitiendo que pueda elegir entre equipos, jugadores, y entrenadores en diferentes premios.
+Los principales objetivos de este trabajo son dos, conseguir una base de datos con información de los jugadores que el usuario pueda ver; y por otro lado, dar la posibilidad al usuario de dar su opiniÓn acerca de la NBA permitiendo que pueda elegir entre equipos, jugadores, y entrenadores en diferentes premios.
