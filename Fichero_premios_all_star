@@ -60,7 +60,7 @@ char nombre6[100];
 {
 ficha jugador;
 FILE *pf;
-pf=fopen("premiosallstar.txt", "rb");
+pf=fopen("premiosallstar.txt", "r");
 while(fread(&jugador, sizeof(ficha), 1, pf)==1)
 {
 printf("\nMVP: %s\n", jugador.nombre1);
