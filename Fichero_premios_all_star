@@ -1,0 +1,76 @@
+#include <stdio.h>
+typedef struct
+{
+char nombre1[100];
+char nombre2[100];
+char nombre3[100];
+char nombre4[100];
+char nombre5[100];
+char nombre6[100];
+}
+ficha;
+void main ()
+{
+ficha jugador;
+char opcion1;
+char opcion2;
+FILE *pf;
+pf=fopen("premiosallstar.txt", "w");
+do
+{
+fflush(stdin);
+printf("\nMVP: ");
+gets(jugador.nombre1);
+printf("Jugador que mas ha Mejorado: ");
+gets(jugador.nombre2);
+printf("Mejor defensa: ");
+gets(jugador.nombre3);
+printf("Mejor entrenador: ");
+gets(jugador.nombre4);
+printf("Mejor quinteto: ");
+gets(jugador.nombre5);
+printf("Mejor novato: ");
+gets(jugador.nombre6); 
+
+fwrite(&jugador, sizeof(ficha), 1, pf); 
+fflush(stdin);
+
+printf("\nMas jugadores (s/n)?\n");
+scanf("%c", &opcion1);
+
+}
+while (opcion1=='s');
+fclose(pf);
+
+printf("Quieres ver tus jugadores (s/n)?\n");
+scanf("%c", &opcion2);
+
+while (opcion2=='s');
+{
+
+{
+char nombre1[100];
+char nombre2[100];
+char nombre3[100];
+char nombre4[100];
+char nombre5[100];
+char nombre6[100];
+}
+
+{
+ficha jugador;
+FILE *pf;
+pf=fopen("premiosallstar.txt", "rb");
+while(fread(&jugador, sizeof(ficha), 1, pf)==1)
+{
+printf("\nMVP: %s\n", jugador.nombre1);
+printf("Jugador que mas ha mejorado: %s\n", jugador.nombre2);
+printf("Mejor defensa: %s\n", jugador.nombre3);
+printf("Mejor entrenador: %s\n", jugador.nombre4);
+printf("Mejor quinteto: %s\n", jugador.nombre5);
+printf("Mejor novato: %s\n", jugador.nombre6);
+}
+fclose(pf);
+}
+}
+}
