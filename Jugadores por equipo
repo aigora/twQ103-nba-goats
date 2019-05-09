@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+typedef struct{
+	char nombre[50];
+	char posicion[50];
+	char equipo[50];
+	float puntos;
+	float asistencias;
+	float rebotes;
+}jugador;
+
+typedef struct{
+	char nombre[50];
+}equipos;
+
+
+int main(){
+	
+	int conf;
+	int i=0;
+	
+	FILE *pj;
+	FILE *pe;
+	FILE *po;
+	
+	jugador persona;
+	equipos cole;
+	
+	do{
+		printf("Te vamos a mostar las dos conferencias que hay en la NBA, cada una con 15 equipos\n");
+		printf("Elige una de las dos:\n(1)Oeste\n(2)Este\n");
+		scanf("%d", &conf);
+	}while (conf < 1 || conf>2);
+	
+	printf("Bien! Ahora te vamos a mostar los equipos de la conferencia escogida\n");
+	
+	switch (conf){
+		case 1:
+			po = fopen("oeste.txt","r");
+			fscanf(po,"%s",&cole.nombre);
+			fclose(po);
+			for (i=0;i<=15;i++){
+				printf("%s",cole.nombre[i]);
+			}
+			break;
+			
+		case 2:
+			pe = fopen("este.txt","r");
+			fscanf(pe,"%s",&cole.nombre);
+			fclose(pe);
+			for (i=0;i<=15;i++){
+				printf("%s",cole.nombre[i]);
+			}
+			break;
+	}
+}
