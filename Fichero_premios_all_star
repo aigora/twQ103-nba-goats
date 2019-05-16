@@ -1,76 +1,51 @@
 #include <stdio.h>
-typedef struct
+#include <string.h>
+
+int main()
 {
+	FILE*ptFichero;
 char nombre1[100];
 char nombre2[100];
 char nombre3[100];
 char nombre4[100];
 char nombre5[100];
 char nombre6[100];
-}
-ficha;
-void main ()
-{
-ficha jugador;
-char opcion1;
-char opcion2;
-FILE *pf;
-pf=fopen("premiosallstar.txt", "w");
+char opcion;
+
+ptFichero=fopen("premiosallstar.txt", "w");
 do
 {
-fflush(stdin);
-printf("\nMVP: ");
-gets(jugador.nombre1);
-printf("Jugador que mas ha Mejorado: ");
-gets(jugador.nombre2);
-printf("Mejor defensa: ");
-gets(jugador.nombre3);
-printf("Mejor entrenador: ");
-gets(jugador.nombre4);
-printf("Mejor quinteto: ");
-gets(jugador.nombre5);
-printf("Mejor novato: ");
-gets(jugador.nombre6); 
+puts("\nCrea tus premios all star\n");
+puts("MVP: ");
+gets(nombre1);
+puts("Jugador que mas ha mejorado: ");
+gets(nombre2);
+puts("Mejor defensa: ");
+gets(nombre3);
+puts("Mejor entrenador: ");
+gets(nombre4);
+puts("Mejor quinteto: ");
+gets(nombre5);
+puts("Mejor novato: ");
+gets(nombre6); 
+fprintf(ptFichero, "MVP :%s\n",nombre1);
+fprintf(ptFichero, "Jugador que mas ha mejorado :%s\n",nombre2);
+fprintf(ptFichero, "Mejor defensa: %s\n",nombre3);
+fprintf(ptFichero, "Mejor entrenador: %s\n",nombre4);
+fprintf(ptFichero, "Mejor quinteto: %s\n",nombre5);
+fprintf(ptFichero, "Mejor novato: %s\n",nombre6);
 
-fwrite(&jugador, sizeof(ficha), 1, pf); 
-fflush(stdin);
+fclose(ptFichero);
+system ("cls");
+printf("\nMas jugadores?\n");
+printf("1.Salir\n");
+printf("2.Volver a hacer\n");
 
-printf("\nMas jugadores (s/n)?\n");
-scanf("%c", &opcion1);
+
+scanf("%c", &opcion);
 
 }
-while (opcion1=='s');
-fclose(pf);
+while (opcion==2);
 
-printf("Quieres ver tus jugadores (s/n)?\n");
-scanf("%c", &opcion2);
-
-while (opcion2=='s');
-{
-
-{
-char nombre1[100];
-char nombre2[100];
-char nombre3[100];
-char nombre4[100];
-char nombre5[100];
-char nombre6[100];
-}
-
-{
-ficha jugador;
-FILE *pf;
-pf=fopen("premiosallstar.txt", "r");
-while(fread(&jugador, sizeof(ficha), 1, pf)==1)
-{
-printf("\nMVP: %s\n", jugador.nombre1);
-printf("Jugador que mas ha mejorado: %s\n", jugador.nombre2);
-printf("Mejor defensa: %s\n", jugador.nombre3);
-printf("Mejor entrenador: %s\n", jugador.nombre4);
-printf("Mejor quinteto: %s\n", jugador.nombre5);
-printf("Mejor novato: %s\n", jugador.nombre6);
-}
-fclose(pf);
-}
-}
+return 0;
 }
