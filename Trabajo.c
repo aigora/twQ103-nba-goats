@@ -23,7 +23,6 @@ int main(){
 	int eleccion;
 	int conf,xx;
 	
-	
 	int i,equipo;
 	
 	FILE *pe;
@@ -78,7 +77,6 @@ int main(){
    
 					for (i=0;i<15;i++){
 						printf("%i. %s\n",i+1,cole[i].nombre);
-					
 					}
 					
 					infojugadoreseste(xx=0);
@@ -185,5 +183,5 @@ void infojugadoresoeste(int xx){
 	system("cls");
 	
 	printf("Estas son las estadisticas buscadas:\n");
-	printf("\nNombre: %s\nPosicion: %s\nPuntos: %.2f\nAsistencias: %.2f\nRebotes: %.2f\n",cr[equipo*5-6+xx].nombre, cr[equipo*5-6+xx].posicion,cr[equipo*5-6+xx].puntos,cr[equipo*5-6+xx].asistencias,cr[equipo*5-6+xx].rebotes);
+	printf("\nNombre: %s\nPosicion: %s\nPuntos: %.2f\nAsistencias: %.2f\nRebotes: %.2f\n",cr[equipo*5-5+xx].nombre, cr[equipo*5-5+xx].posicion,cr[equipo*5-5+xx].puntos,cr[equipo*5-5+xx].asistencias,cr[equipo*5-5+xx].rebotes);
 }
