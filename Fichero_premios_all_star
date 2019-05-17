@@ -36,7 +36,7 @@ fprintf(ptFichero, "Mejor novato: %s\n",nombre6);
 
 fclose(ptFichero);
 system ("cls");
-printf("Visita el fichero allstar para comprobar tus predicciones\n");
+printf("\nVisita el fichero allstar para comprobar tus predicciones\n");
 
 return 0;
 }
