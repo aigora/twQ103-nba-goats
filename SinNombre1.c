@@ -227,11 +227,11 @@ scanf("%d", &w);
 
 switch (w){
 	case 1:
-		printf("Ve al fichero");
+		printf("Visita el fichero 'allstar'");
 		break;
 		
 	case 2:
-		printf("Pues hasta luego");
+		printf("Hasta pronto");
 		break;
 	}
 }
