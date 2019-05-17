@@ -1,20 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void infojugadoreseste();
+void infojugadoresoeste();
+
 // Estructura para escribir los nombres de todos los equipos.
 typedef struct{
 	char nombre[50];
 }equipos;
 
+typedef struct{
+	char nombre[500];
+	char posicion[500];
+	char equipo[500];
+	float puntos;
+	float asistencias;
+	float rebotes;
+}jugador;
+
 int main(){
 	FILE *pf;
 	int eleccion;
-	int conf,div;
+	int conf,xx;
 	
-	int i;
+	
+	int i,equipo;
 	
 	FILE *pe;
 	FILE *po;
+	FILE *pj;
 	
 	equipos cole[50];
 	
@@ -53,6 +67,8 @@ int main(){
 						printf("%i. %s\n",i+1,cole[i].nombre);
 					}
 					
+					infojugadoresoeste();
+					
 				break;
 		
 				case 2:
@@ -62,8 +78,13 @@ int main(){
    
 					for (i=0;i<15;i++){
 						printf("%i. %s\n",i+1,cole[i].nombre);
+					
 					}
-					break;
+					
+					infojugadoreseste(xx=0);
+					
+					break;	
+					
 			}
 		break;
 			
@@ -85,4 +106,84 @@ int main(){
 	}
 	
 	return 0;
+}
+
+void infojugadoreseste(int xx){
+	
+	FILE *pj;
+	
+	int i,equipo,g;
+	
+	jugador cr[500];
+	g=0;
+	
+	pj = fopen("eeste.txt","r");
+	
+	while(fscanf(pj,"%[^;];%[^;];%f;%f;%f;%[^\n]\n",
+    cr[i].nombre,
+    cr[i].posicion,
+    &cr[i].puntos,
+    &cr[i].asistencias,
+	&cr[i].rebotes,
+	cr[i].equipo) != EOF)
+    i++;
+    
+    printf("\nEscribe el equipo que quieres que se vea: ");
+    scanf("%d", &equipo);
+    system("cls");
+    printf("Estos son los jugadores\n");
+
+    for (i=equipo*5-5;i<equipo*5;i++){
+		printf("\n%d. %s\n",g+=1,cr[i].nombre);
+	}
+	
+	do {
+	printf("\nElige a tu jugador preferido:");
+	scanf("%d", &xx);
+	} while (xx>5 || xx<1);
+	
+	system("cls");
+	
+	printf("Estas son las estadisticas buscadas:\n");
+	printf("\nNombre: %s\nPosicion: %s\nPuntos: %.2f\nAsistencias: %.2f\nRebotes: %.2f\n",cr[equipo*5-6+xx].nombre, cr[equipo*5-6+xx].posicion,cr[equipo*5-6+xx].puntos,cr[equipo*5-6+xx].asistencias,cr[equipo*5-6+xx].rebotes);
+}
+
+void infojugadoresoeste(int xx){
+	
+	FILE *pj;
+	
+	int i,equipo,g;
+	
+	jugador cr[500];
+	g=0;
+	
+	pj = fopen("eoeste.txt","r");
+	
+	while(fscanf(pj,"%[^;];%[^;];%f;%f;%f;%[^\n]\n",
+    cr[i].nombre,
+    cr[i].posicion,
+    &cr[i].puntos,
+    &cr[i].asistencias,
+	&cr[i].rebotes,
+	cr[i].equipo) != EOF)
+    i++;
+    
+    printf("\nEscribe el equipo que quieres que se vea: ");
+    scanf("%d", &equipo);
+    system("cls");
+    printf("Estos son los jugadores\n");
+
+    for (i=equipo*5-5;i<equipo*5;i++){
+		printf("\n%d. %s\n",g+=1,cr[i].nombre);
+	}
+	
+	do {
+	printf("\nElige a tu jugador preferido:");
+	scanf("%d", &xx);
+	} while (xx>5 || xx<1);
+	
+	system("cls");
+	
+	printf("Estas son las estadisticas buscadas:\n");
+	printf("\nNombre: %s\nPosicion: %s\nPuntos: %.2f\nAsistencias: %.2f\nRebotes: %.2f\n",cr[equipo*5-6+xx].nombre, cr[equipo*5-6+xx].posicion,cr[equipo*5-6+xx].puntos,cr[equipo*5-6+xx].asistencias,cr[equipo*5-6+xx].rebotes);
 }
