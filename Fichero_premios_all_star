@@ -12,9 +12,8 @@ char nombre5[100];
 char nombre6[100];
 char opcion;
 
-ptFichero=fopen("premiosallstar.txt", "w");
-do
-{
+ptFichero=fopen("allstar.txt", "w");
+
 puts("\nCrea tus premios all star\n");
 puts("MVP: ");
 gets(nombre1);
@@ -37,15 +36,7 @@ fprintf(ptFichero, "Mejor novato: %s\n",nombre6);
 
 fclose(ptFichero);
 system ("cls");
-printf("\nMas jugadores?\n");
-printf("1.Salir\n");
-printf("2.Volver a hacer\n");
-
-
-scanf("%c", &opcion);
-
-}
-while (opcion==2);
+printf("Visita el fichero allstar para comprobar tus predicciones\n");
 
 return 0;
 }
