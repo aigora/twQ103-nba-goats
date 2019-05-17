@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include <string.h>
-
+void allstar();
 int main()
 {
+	int i;
+allstar(i=0);
+
+return 0;
+}
+
+
+void allstar(int i){
+
 	FILE*ptFichero;
 char nombre1[100];
 char nombre2[100];
@@ -36,7 +45,4 @@ fprintf(ptFichero, "Mejor novato: %s\n",nombre6);
 
 fclose(ptFichero);
 system ("cls");
-printf("\nVisita el fichero allstar para comprobar tus predicciones\n");
-
-return 0;
-}
+printf("Visita el fichero allstar para comprobar tus predicciones\n");}
