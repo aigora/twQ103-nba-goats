@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void allstar();
 void infojugadoreseste();
 void infojugadoresoeste();
 
@@ -24,6 +25,8 @@ int main(){
 	int conf,xx;
 	
 	int i,equipo;
+	
+	int w;
 	
 	FILE *pe;
 	FILE *po;
@@ -88,12 +91,11 @@ int main(){
 			
 		case 2:
 			system ("cls");
-				printf("Empieza a rellenar tu bracket:\n");
 			break;
 		
 		case 3:
 			system ("cls");
-			printf("Con que premio quieres comenzar?\n");
+			allstar(w=0);
 			break;
 		
 		case 4: 
@@ -184,4 +186,54 @@ void infojugadoresoeste(int xx){
 	
 	printf("Estas son las estadisticas buscadas:\n");
 	printf("\nNombre: %s\nPosicion: %s\nPuntos: %.2f\nAsistencias: %.2f\nRebotes: %.2f\n",cr[equipo*5-5+xx].nombre, cr[equipo*5-5+xx].posicion,cr[equipo*5-5+xx].puntos,cr[equipo*5-5+xx].asistencias,cr[equipo*5-5+xx].rebotes);
+}
+void allstar(int w){
+
+	FILE*ptFichero;
+char nombre0[100];
+char nombre1[100];
+char nombre2[100];
+char nombre3[100];
+char nombre4[100];
+char nombre5[100];
+char nombre6[100];
+
+ptFichero=fopen("allstar.txt", "w");
+
+puts("\nCrea tus premios all star\n");
+gets(nombre0);
+puts("\nMVP: \n");
+gets(nombre1);
+puts("\nJugador que mas ha mejorado: \n");
+gets(nombre2);
+puts("\nMejor defensa: \n");
+gets(nombre3);
+puts("\nMejor entrenador: \n");
+gets(nombre4);
+puts("\nMejor quinteto: \n");
+gets(nombre5);
+puts("\nMejor novato: \n");
+gets(nombre6); 
+fprintf(ptFichero, "MVP :%s\n",nombre1);
+fprintf(ptFichero, "Jugador que mas ha mejorado :%s\n",nombre2);
+fprintf(ptFichero, "Mejor defensa: %s\n",nombre3);
+fprintf(ptFichero, "Mejor entrenador: %s\n",nombre4);
+fprintf(ptFichero, "Mejor quinteto: %s\n",nombre5);
+fprintf(ptFichero, "Mejor novato: %s\n",nombre6);
+
+fclose(ptFichero);
+system ("cls");
+
+printf("Quieres ver tus elecciones??\n1. Si\n2. No\n");
+scanf("%d", &w);
+
+switch (w){
+	case 1:
+		printf("Visita el fichero -allstar-");
+		break;
+		
+	case 2:
+		printf("Hasta pronto");
+		break;
+	}
 }
