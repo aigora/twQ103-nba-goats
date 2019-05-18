@@ -190,6 +190,7 @@ void infojugadoresoeste(int xx){
 void allstar(int w){
 
 	FILE*ptFichero;
+char nombre0[100];
 char nombre1[100];
 char nombre2[100];
 char nombre3[100];
@@ -200,6 +201,7 @@ char nombre6[100];
 ptFichero=fopen("allstar.txt", "w");
 
 puts("\nCrea tus premios all star\n");
+gets(nombre0);
 puts("\nMVP: \n");
 gets(nombre1);
 puts("\nJugador que mas ha mejorado: \n");
