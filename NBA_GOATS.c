@@ -281,7 +281,7 @@ void allstar(int w){
 
 	switch (w){
 		case 1:
-			printf("Visita el fichero -allstar-");
+			printf("Visita el fichero -allstar- en la carpeta del programa");
 		break;
 		
 		case 2:
